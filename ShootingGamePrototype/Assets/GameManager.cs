@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject astroid;
+    public GameObject asteroid;
     public float time = 0;
     public float maxTime = 2;
     public List<GameObject> enemies;
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             if(check == 0)
             {
                 Vector3 vec = new Vector3(10, Random.Range(-4.0f, 4.0f), 0);
-                Instantiate(astroid, vec, Quaternion.identity);
+                Instantiate(asteroid, vec, Quaternion.identity);
             }
             else
             {

@@ -304,7 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b497bf84c537b4c8f7a0732df49c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astroid: {fileID: 1306746626825293443, guid: 6319abcd0362e0b42be32daa3623bf9a, type: 3}
+  asteroid: {fileID: 1306746626825293443, guid: 6319abcd0362e0b42be32daa3623bf9a, type: 3}
   time: 0
   maxTime: 2
   enemies:
