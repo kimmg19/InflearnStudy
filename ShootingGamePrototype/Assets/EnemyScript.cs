@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public int type = 0;
+    public int type ;
     public int hp = 3;
-    public float speed = 4;
+    public float speed = 4;         //적 이동속도
     public float coin = 0;
     public float time;
     public GameObject enemyShot;
@@ -35,13 +35,15 @@ public class EnemyScript : MonoBehaviour
     {
         time += Time.deltaTime;
         if (time > maxShotTime)
-        {            
+        {    
+            //적 발사체 생성,오브젝트 받아서->오브젝트의 스크립트받아서->스크립트의 speeed 선언
             GameObject shotObj = Instantiate(enemyShot, transform.position, Quaternion.identity);
-            EnemyShotScript shotScript= shotObj.GetComponent<EnemyShotScript>();
-            shotScript.speed = shotSpeed;
+            //EnemyShotScript shotScript= shotObj.GetComponent<EnemyShotScript>();
+            //shotScript.speed = shotSpeed;
+            shotObj.GetComponent<EnemyShotScript>().speed = shotSpeed;
             time = 0;
         }
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
+        transform.Translate(Vector3.left * speed * Time.deltaTime);     //적 이동
     }
 
     private void OnBecameInvisible()

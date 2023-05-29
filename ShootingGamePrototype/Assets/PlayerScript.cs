@@ -32,6 +32,7 @@ public class PlayerScript : MonoBehaviour
         PlayerShot();
 
     }
+    //플레이어 이동 함수
     void Move()
     {
         float x = Input.GetAxisRaw("Horizontal");   //1,-1 출력
@@ -41,7 +42,7 @@ public class PlayerScript : MonoBehaviour
         transform.position += dir * Time.deltaTime * speed;    //방향*시간*속도=벡터
 
         float newX = transform.position.x;    //비행기의 x좌표
-        float newY = transform.position.y;  //비행기의 y좌표
+        float newY = transform.position.y;    //비행기의 y좌표
 
         //clamp 함수 밑의 주석문을 함수로 구현.
         newX = Mathf.Clamp(newX, min.x + chrSize.x, max.x - chrSize.x);
@@ -74,6 +75,7 @@ public class PlayerScript : MonoBehaviour
 
     public float shotMax = 0.2f;
     public float shotDelay = 0;
+    //발사체 생성 함수
     void PlayerShot()
     {
         shotDelay += Time.deltaTime;
@@ -90,9 +92,10 @@ public class PlayerScript : MonoBehaviour
                 Instantiate(shot, vec, Quaternion.identity);
                 shotDelay = 0;
             }
-        }
-        
+        }        
     }
+
+    //충돌 검사 함수
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Item") //부딪힌 물체가 "item"인 경우
