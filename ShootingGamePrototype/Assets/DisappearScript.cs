@@ -8,7 +8,7 @@ public class DisappearScript : MonoBehaviour
     public float time = 1.0f;
     void Start()
     {
-        //time초 후에 코인 삭제
+        //time초 후에 폭발효과 삭제
         Destroy(gameObject, time);
     }
 }

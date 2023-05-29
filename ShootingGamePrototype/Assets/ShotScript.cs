@@ -47,6 +47,7 @@ public class ShotScript : MonoBehaviour
             }
             //발사체가 적에 적중시 발사체 제거
             Destroy(gameObject);
+
         }else if (collision.gameObject.tag == "Enemy")
         {
             //EnemyScript에서 hp 값 가져오기

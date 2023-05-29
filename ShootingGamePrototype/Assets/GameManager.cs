@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject asteroid;
     public float time = 0;
     public float maxTime = 2;
-    public List<GameObject> enemies;
+    public List<GameObject> enemies;        //유니티에서 프리팹 연결.
     public static GameManager instance;
     public float coin;
 

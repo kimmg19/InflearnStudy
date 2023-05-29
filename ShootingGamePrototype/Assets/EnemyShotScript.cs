@@ -5,10 +5,6 @@ using UnityEngine;
 public class EnemyShotScript : MonoBehaviour
 {
     public float speed = 4;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

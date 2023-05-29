@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1306746626825293500}
   - component: {fileID: 1306746626825293501}
-  - component: {fileID: 1306746626825293442}
   - component: {fileID: 9127763627179147033}
   - component: {fileID: 4461559589714301414}
+  - component: {fileID: 1306746626825293442}
   m_Layer: 10
   m_Name: Asteroid01
   m_TagString: Asteroid
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1306746626825293442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306746626825293443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731a16ca41ddbeb45876322649e5d7b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 4.5
-  rotSpeed: 50
-  coin: 2
-  hp: 10
 --- !u!58 &9127763627179147033
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,3 +124,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1306746626825293442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306746626825293443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731a16ca41ddbeb45876322649e5d7b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4.5
+  rotSpeed: 50
+  coin: 2
+  hp: 10
