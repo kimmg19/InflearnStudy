@@ -149,3 +149,7 @@ MonoBehaviour:
   type: 2
   hp: 3
   speed: 4
+  coin: 0
+  enemyShot: {fileID: 3333820279529902134, guid: f0e33a071353fac4384535f9750455a6, type: 3}
+  maxShotTime: 0
+  shotSpeed: 0

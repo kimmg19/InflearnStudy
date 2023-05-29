@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Asteroid
   - Item
+  - EnemyShot
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - PlayerShot
   - Enemy
   - Item
-  - 
+  - EnemyShot
   - 
   - 
   - 
@@ -58,6 +59,9 @@ TagManager:
     locked: 0
   - name: Item
     uniqueID: 1742312587
+    locked: 0
+  - name: EnemyShot
+    uniqueID: 4253879715
     locked: 0
   - name: Enemy
     uniqueID: 1813529343

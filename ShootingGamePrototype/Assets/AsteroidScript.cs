@@ -13,6 +13,8 @@ public class AsteroidScript : MonoBehaviour
         transform.position += Vector3.left * speed * Time.deltaTime; //이동-벡터 이용
         transform.Rotate(new Vector3(0,0,Time.deltaTime*rotSpeed));  //회전-Rotate 함수 이용
     }
+
+    //소행성이 화면 밖으로 나갈 떄 파괴.
     private void OnBecameInvisible()
     {
         Destroy(gameObject);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public GameObject shot;
+    public GameObject explosion;
     public Transform shotPointTr;
     float speed = 5;
     Vector3 min, max;
@@ -81,10 +82,11 @@ public class PlayerScript : MonoBehaviour
             if(shotDelay > shotMax)
             {
                 //비행기의 위치 가져오는 중
+                //발사체의 위치 지정.
                 Vector3 vec = new Vector3(transform.position.x + 1.12f,
                     transform.position.y - 0.17f, transform.position.z);
 
-                //물체 생성하는 함수,3번째거는 물체 회전 담당
+                //발사체 생성,3번째거는 물체 회전 담당
                 Instantiate(shot, vec, Quaternion.identity);
                 shotDelay = 0;
             }
@@ -93,12 +95,20 @@ public class PlayerScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Item")
+        if (collision.gameObject.tag == "Item") //부딪힌 물체가 "item"인 경우
         {
+            // GetComponent<CoinScript>()는 충돌한 게임 객체에서 CoinScript 컴포넌트를 가져옵니다.
             CoinScript coinScript=collision.gameObject.GetComponent<CoinScript>();
             GameManager.instance.coin += coinScript.coinSize;
             print("Coin"+GameManager.instance.coin);
             Destroy(collision.gameObject);
+        }else if (collision.gameObject.tag =="Asteroid"||
+            collision.gameObject.tag =="Enemy"||
+            collision.gameObject.tag == "EnemyShot")        //부딪힌 물체의 tag가 ~일 경우 두 물체 다 파괴. 
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Instantiate(explosion,transform.position,Quaternion.identity);
         }
     }
 }

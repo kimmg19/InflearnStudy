@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shot: {fileID: 273086960715413839, guid: ef0281e3da3447d47b8d87047f2578b5, type: 3}
+  explosion: {fileID: 5263786712586118016, guid: b61d2ac6ee5f3a24bad679e236af42d9, type: 3}
   shotPointTr: {fileID: 1414342751}
   shotMax: 0.2
   shotDelay: 0
@@ -890,8 +891,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414342750}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.12, y: -0.17, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
