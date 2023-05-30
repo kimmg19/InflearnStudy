@@ -104,6 +104,8 @@ public class PlayerScript : MonoBehaviour
             CoinScript coinScript=collision.gameObject.GetComponent<CoinScript>();
             GameManager.instance.coin += coinScript.coinSize;
             print("Coin"+GameManager.instance.coin);
+
+            GameManager.instance.coinText.text=GameManager.instance.coin.ToString();        //얻은 코인 텍스트로 
             Destroy(collision.gameObject);
         }else if (collision.gameObject.tag =="Asteroid"||
             collision.gameObject.tag =="Enemy"||
@@ -114,4 +116,6 @@ public class PlayerScript : MonoBehaviour
             Instantiate(explosion,transform.position,Quaternion.identity);
         }
     }
+
+    
 }
